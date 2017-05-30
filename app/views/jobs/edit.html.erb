@@ -1,0 +1,52 @@
+<div class="container">
+  <h1>Edit Job </h1>
+  <div class="col-md-3"></div>
+    <div class="col-md-6">
+<form action="/update/<%=@job.id%>" method='post'>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <div class="form-group">
+    <label for="poster">Poster:</label>
+    <input type="text" class="form-control" id="poster" name="poster">
+  </div>
+  <div class="form-group">
+    <label for="category">Category:</label>
+    <select type='input'class="form-control" id="category" name="category">
+      <option name="Cleaning"value="Cleaning">Cleaning</option>
+      <option name="Pets"    value="Pets">Pets</option>
+      <option name="Auto"    value="Auto">Auto</option>
+      <option name="Tutoring"value="Tutoring">Tutoring</option>
+      <option name="Cooking" value="Cooking">Cooking</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="location">Location:</label>
+    <select type='input'class="form-control" id="location" name="location">
+      <option name="Boston" value="Boston">Boston</option>
+      <option name="San Jose" value="San Jose">San Jose</option>
+      <option name="New York" value="New York">New York</option>
+      <option name="Atlanta" value="Atlanta">Atlanta</option>
+      <option name="San Francisco" value="San Francisco">San Francisco</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="status">Status:</label>
+    <select type='input'class="form-control" id="status" name="status">
+      <option name="pending" value="pending">pending</option>
+      <option name="received" value="received">received</option>
+      <option name="in progress" value="in progress">in progress</option>
+      <option name="complete" value="complete">complete</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="actions">Description:</label>
+    <input type="text" class="form-control" id="actions" name="actions">
+  </div>
+
+    <input type="submit" name="" value="Save changes">
+  <br><br>
+  <a href="/">Back</a>
+
+</form>
+</div>
+  <div class="col-md-3"></div>
+</div>
